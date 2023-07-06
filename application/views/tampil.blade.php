@@ -38,7 +38,9 @@
         <table class="table table-bordered">
           <tr>
             <th>Username</th>
+            <th>Email</th>
             <th>Artikel</th>
+            <th>Jenis</th>
             <th>Created_at</th>
             <th>Update_at</th>
             <th>Aksi</th>
@@ -46,7 +48,9 @@
           @foreach($post_list as $post)
           <tr>
             <td>{{ $post->user->username }}</td>
-            <td>{{ $post->artikel }}</td>
+            <td>{{ $post->user->email }}</td>
+            <td>{{ $post->article }}</td>
+            <td>{{ $post->jenis}}</td>
             <td>{{ $post->created_at }}</td>
             <td>{{ $post->updated_at }}</td>
             <td><a href="{{ site_url('Welcome/hapus/'.$post->id)}}">Hapus</a> | <a href="{{ site_url('Welcome/ubah/'.$post->id) }}">Ubah</a></td>

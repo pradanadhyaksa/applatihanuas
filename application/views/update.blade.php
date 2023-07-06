@@ -41,9 +41,18 @@
                   @endforeach
                 </select>
             </div>
+            <label for="exampleInputEmail1" class="form-label">Jenis</label>
+            <div>
+            <input type="radio" id="berita" name="jenis" value="Berita"> 
+            <label for="berita">Berita</label>
+             <input type="radio" id="tutorial" name="jenis" value="Tutorial">
+             <label for="tutorial">Tutorial</label>
+              <input type="radio" id="blog" name="jenis" value="Blog">
+            <label for="blog">Blog</label>
+            </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Artikel</label>
-                <textarea class="form-control" id="nama" name="artikel" rows="3">{{ $post->artikel }}</textarea>
+                <textarea class="form-control" id="nama" name="artikel" rows="3">{{ $post->article }}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             <a class="btn btn-secondary" href="{{site_url('Welcome/tampil')}}">Tampil</a>
